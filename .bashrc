@@ -146,3 +146,8 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 
 # Alias for dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+# Load local config if available
+if [ -f .bashrc.local ]; then
+    . .bashrc.local
+fi
